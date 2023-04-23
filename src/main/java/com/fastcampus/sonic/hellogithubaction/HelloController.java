@@ -12,4 +12,10 @@ public class HelloController {
     public ResponseEntity<String> hello() {
         return ResponseEntity.of(Optional.of("Hello, Github Actions"));
     }
+
+    @GetMapping(value = "/bye")
+    public ResponseEntity<String> bye() {
+        return ResponseEntity.of(Optional.of("Bye, Github Actions"));
+    }
+
 }
