@@ -18,4 +18,9 @@ public class HelloController {
         return ResponseEntity.of(Optional.of("Bye, Github Actions"));
     }
 
+    @GetMapping(value = "/push")
+    public ResponseEntity<String> push() {
+        return ResponseEntity.of(Optional.of("Push, Github Actions"));
+    }
+
 }
