@@ -1,7 +1,9 @@
 name: hello-github-actions-with-inputs
 run-name: ${{ github.actor }}의 헬로 깃허브
 on:
+  # workflow_dispatch = 수동으로 실행시 필요
   workflow_dispatch:
+  # inputs = workflow_dispatch에 입력 값을 받음
     inputs:
       your_name:
         required: true
@@ -9,6 +11,7 @@ on:
       your_age:
         required: true
         type: integer
+
 jobs:
   hello-spring-boot:
     runs-on: ubuntu-latest
